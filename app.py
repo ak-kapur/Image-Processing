@@ -61,9 +61,6 @@ if uploaded_file is not None:
     processed_image = apply_filter(image_np, selected_filter)
 
     st.subheader("Filtered Image:")
-    st.image(
-        processed_image,
-        channels="GRAY" if selected_filter in ["Grayscale", "Canny Edge Detection"] else "RGB",
-        use_column_width=True
-    )
+    st.image(processed_image, channels="GRAY" if selected_filter in ["Grayscale", "Canny Edge Detection"] else "RGB", use_container_width=True)
+
     st.markdown("Developed by ARYAMAN KAPUR 229310218 ")
